@@ -1,6 +1,6 @@
 node {
     stage('Script') {
-        echo("更新腳本 - ${env.JOB_BASE_NAME}")
+        echo("Update script - ${env.JOB_BASE_NAME}")
         checkout([
             $class: 'GitSCM',
             branches: [[name: '*/scripted']],
