@@ -5,7 +5,8 @@ node {
             branches: [[name: '*/scripted']],
             userRemoteConfigs: [[
                 url: 'https://github.com/cihy999/JenkinsSample.git'
-            ]]
+            ]],
+            changelog: false
         ])
     }
     stage('Build') {
