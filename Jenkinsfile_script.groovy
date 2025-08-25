@@ -1,4 +1,4 @@
-node {
+node('Script') {
     stage('Build') {
         echo 'This is BUILD stage'
     }
