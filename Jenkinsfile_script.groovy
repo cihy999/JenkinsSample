@@ -1,5 +1,6 @@
 node {
     stage('Script') {
+        echo("更新腳本 - ${env.JOB_BASE_NAME}")
         checkout([
             $class: 'GitSCM',
             branches: [[name: '*/scripted']],
@@ -17,15 +18,15 @@ node {
         ])
     }
     stage('Build') {
-        echo 'This is BUILD stage'
+        echo("This is BUILD stage")
     }
     stage('Test') {
-        echo 'This is TEST stage'
+        echo("This is TEST stage")
     }
     stage('Deploy') {
-        echo 'This is DEPLOY stage'
+        echo("This is DEPLOY stage")
     }
     stage('Release') {
-        echo 'This is RELEASE stage'
+        echo("This is RELEASE stage")
     }
 }
