@@ -7,7 +7,13 @@ node {
                 url: 'https://github.com/cihy999/JenkinsSample.git'
             ]],
             changelog: false,
-            poll: false
+            poll: false,
+            extensions: [[
+                $class: 'CloneOption', 
+                shallow: true,  // 淺拷貝
+                noTags: true,   // 不下載標籤
+                depth: 1        // 只抓最近一次 commit
+            ]]
         ])
     }
     stage('Build') {
