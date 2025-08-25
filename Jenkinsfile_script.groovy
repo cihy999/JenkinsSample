@@ -1,4 +1,10 @@
-node('Script') {
+node {
+    stage('Build') {
+        git branch: 'scripted', url: 'https://github.com/cihy999/JenkinsSample.git'
+    }
+}
+
+node {
     stage('Build') {
         echo 'This is BUILD stage'
     }
