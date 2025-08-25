@@ -6,7 +6,8 @@ node {
             userRemoteConfigs: [[
                 url: 'https://github.com/cihy999/JenkinsSample.git'
             ]],
-            changelog: false
+            changelog: false,
+            poll: false
         ])
     }
     stage('Build') {
